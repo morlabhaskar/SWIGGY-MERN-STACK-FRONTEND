@@ -11,7 +11,7 @@
         
     }
     body {
-        background-image: linear-gradient(to bottom right,rgb(255, 255, 255),rgb(219, 216, 216),rgb(250, 209, 154),rgb(250, 195, 169));
+        /* background-image: linear-gradient(to bottom right,rgb(255, 255, 255),rgb(219, 216, 216),rgb(250, 209, 154),rgb(250, 195, 169)); */
         /* color: white; */
         min-height: 100vh;
     }
