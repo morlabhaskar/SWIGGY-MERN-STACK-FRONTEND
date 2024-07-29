@@ -5,6 +5,7 @@ import Error from "./pages/error/Error.jsx"
 import LandingPage from './pages/LandingPage.jsx'
 import Products from './components/Products.jsx'
 import Footer from './components/Footer.jsx'
+import VendorDashboard from '../src/pages/VendorDashboard.jsx'
 
 function App() {
   const Layout = () => (
@@ -19,7 +20,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<LandingPage />} />
-          <Route path='/products/:firmId/:firmName' element={<Products />} />
+          <Route path='/products/:firmId/:Offer/:firmName/:firmImage' element={<Products />} />
+          <Route path='/dashboard' element={<VendorDashboard />} />
         </Route>
         <Route path='*' element={<Error />} />
       </Routes>
