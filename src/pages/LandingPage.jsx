@@ -5,6 +5,7 @@ import Chines from '../components/Chines'
 import FirmCollection from '../components/FirmCollection'
 
 import { API_URL } from '../api/Url'
+import BestPlaces from '../components/BestPlaces'
 
 const LandingPage = () => {
   const [loading, setLoading] = useState(true);
@@ -29,21 +30,63 @@ const LandingPage = () => {
   return (
     <div>
       {loading ?
-
-        <div role="status" className="animate-pulse h-[100vh] flex flex-col p-7 border border-red-500">
-          <div>
-            <div className='flex flex-col'>
-              <div className="h-[25px] bg-gray-300 rounded-full dark:bg-gray-400 max-w-[640px] mb-2.5 border border-red-500"></div>
-              <div className='flex'>
-                <div className="h-[25px] bg-gray-300 rounded-full dark:bg-gray-400 max-w-[640px] mb-2.5 border border-red-500"></div>
-                <div className="h-[25px] bg-gray-300 rounded-full dark:bg-gray-400 max-w-[640px] mb-2.5 border border-red-500"></div>
+        <div role="status" className="animate-pulse h-[100vh] flex flex-col p-6">
+          <div className='w-[90vw] h-[80vh] mx-auto '>
+            <div className='flex justify-between'>
+              <p className="h-[30px] bg-slate-300 rounded-full border w-[320px] "></p>
+              <div className='flex gap-8'>
+                <p className="h-[30px] bg-slate-300 rounded-full border  w-[30px]"></p>
+                <p className="h-[30px] bg-slate-300 rounded-full border  w-[30px]"></p>
               </div>
             </div>
-            <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[640px] mb-2.5"></div>
-            <div className="h-2.5 mx-auto bg-gray-300 rounded-full dark:bg-gray-700 max-w-[540px]"></div>
-            <div className="flex items-center justify-center mt-4">
-              <div className="w-20 h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 me-3"></div>
-              <div className="w-24 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+            <div className='flex gap-8 mt-4 '>
+              <p className="h-[120px] bg-slate-300 rounded-full border w-[120px] "></p>
+              <p className="h-[120px] bg-slate-300 rounded-full border w-[120px] "></p>
+              <p className="h-[120px] bg-slate-300 rounded-full border w-[120px] "></p>
+              <p className="h-[120px] bg-slate-300 rounded-full border w-[120px] "></p>
+              <p className="h-[120px] bg-slate-300 rounded-full border w-[120px] "></p>
+              <p className="h-[120px] bg-slate-300 rounded-full border w-[120px] "></p>
+              <p className="h-[120px] bg-slate-300 rounded-full border w-[120px] "></p>
+              <p className="h-[120px] bg-slate-300 rounded-full border w-[120px] "></p>
+              <p className="h-[120px] bg-slate-300 rounded-full border w-[120px] "></p>
+            </div>
+            <div className='flex justify-between mt-10'>
+              <p className="h-[30px] bg-slate-300 rounded-full border w-[320px] "></p>
+              <div className='flex gap-8'>
+                <p className="h-[30px] bg-slate-300 rounded-full border  w-[30px]"></p>
+                <p className="h-[30px] bg-slate-300 rounded-full border  w-[30px]"></p>
+              </div>
+            </div>
+            <div className='flex gap-8 mt-7 '>
+              <div className='flex flex-col'>
+                  <p className="h-[200px] bg-slate-300 rounded-md border w-[230px] "></p>
+                  <span className='h-[15px] bg-slate-300 rounded-full border w-[150px] mt-2'></span>
+                  <span className='h-[15px] bg-slate-300 rounded-full border w-[60px] mt-2'></span>
+              </div>
+              <div className='flex flex-col'>
+                  <p className="h-[200px] bg-slate-300 rounded-md border w-[230px] "></p>
+                  <span className='h-[15px] bg-slate-300 rounded-full border w-[150px] mt-2'></span>
+                  <span className='h-[15px] bg-slate-300 rounded-full border w-[60px] mt-2'></span>
+              </div>
+              <div className='flex flex-col'>
+                  <p className="h-[200px] bg-slate-300 rounded-md border w-[230px] "></p>
+                  <span className='h-[15px] bg-slate-300 rounded-full border w-[150px] mt-2'></span>
+                  <span className='h-[15px] bg-slate-300 rounded-full border w-[60px] mt-2'></span>
+              </div>
+              <div className='flex flex-col'>
+                  <p className="h-[200px] bg-slate-300 rounded-md border w-[230px] "></p>
+                  <span className='h-[15px] bg-slate-300 rounded-full border w-[150px] mt-2'></span>
+                  <span className='h-[15px] bg-slate-300 rounded-full border w-[60px] mt-2'></span>
+              </div>
+              <div className='flex flex-col'>
+                  <p className="h-[200px] bg-slate-300 rounded-md border w-[230px] "></p>
+                  <span className='h-[15px] bg-slate-300 rounded-full border w-[150px] mt-2'></span>
+                  <span className='h-[15px] bg-slate-300 rounded-full border w-[60px] mt-2'></span>
+              </div>
+            </div>
+
+            <div className='flex'>
+                <p className="h-[30px] bg-slate-300 rounded-full border  w-[600px] mt-8"></p>
             </div>
           </div>
         </div>
@@ -53,6 +96,7 @@ const LandingPage = () => {
             <ItemsDisplay />
             <Chines />
             <FirmCollection />
+            <BestPlaces />
           </>
         )}
     </div>

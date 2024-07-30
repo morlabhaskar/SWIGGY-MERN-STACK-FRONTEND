@@ -226,7 +226,7 @@ const AllProducts = () => {
           okText="Yes"
           cancelText="No"
         >
-          <Button type="link" className='text-red-600'>
+          <Button type="link" className='text-red-600 text-xl'>
             <FaRegTrashAlt />
           </Button>
         </Popconfirm>
@@ -244,7 +244,7 @@ const AllProducts = () => {
             <CgAddR />
           </span>
         </h1>
-        <hr className='w-[50px] border-t-8 rounded-[10px] border-orange-400' />
+        <hr className='w-[50px] border-t-4 rounded-[10px] border-orange-400'/>
       </div>
       <div className='flex justify-center items-center'>
         {products.length === 0 ? (
