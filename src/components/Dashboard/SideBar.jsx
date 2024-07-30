@@ -1,15 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { IoPersonCircleOutline, IoPeopleOutline, IoFastFoodOutline } from "react-icons/io5";
 import { CiShoppingBasket, CiShop } from "react-icons/ci";
+import { API_URL } from '../../api/Url';
 
 const SideBar = ({ showaddfirmHandler, showaddproductHandler, allproductsHandler, profileHandler, showFirmTitle }) => {
-  // useEffect(() => {
-  //   const expand_btn = document.querySelector(".expand-btn");
-  //   expand_btn.addEventListener("click", () => {
-  //     document.body.classList.toggle("collapsed");
-  //   });
-  // }, [])
+  const [vendor1, setVendor1] = useState([])
+  const vendorHandler = async () => {
+    const vendorId = localStorage.getItem('vendorId');
+    try {
+      const response = await fetch(`${API_URL}/vendor/single-vendor/${vendorId}`)
+      const vendorData = await response.json()
+      setVendor1(vendorData.vendor)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(() => {
+    vendorHandler()
+  }, [])
   return (
     <Wrapper>
       <div className="sidebar w-[100%] max-w-[230px] px-2 h-[710px] flex flex-col justify-between">
@@ -21,7 +30,7 @@ const SideBar = ({ showaddfirmHandler, showaddproductHandler, allproductsHandler
         </div>
         <div className="pro flex flex-col items-center mb-4">
           <span><IoPersonCircleOutline className='text-5xl text-slate-700' /></span>
-          <span className='text-lg text-slate-700'>Bhaskar</span>
+          <span className='text-lg text-slate-900'>{vendor1.username}</span>
         </div>
 
       </div>

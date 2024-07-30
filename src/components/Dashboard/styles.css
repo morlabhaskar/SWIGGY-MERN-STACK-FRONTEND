@@ -1,0 +1,14 @@
+.ant-table-body {
+    overflow: hidden; 
+  }
+  
+  .ant-table-body::-webkit-scrollbar {
+    display: none; 
+  }
+
+.ant-table-body {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+  }
+
+  
