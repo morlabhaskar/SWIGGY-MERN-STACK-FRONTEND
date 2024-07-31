@@ -56,7 +56,7 @@ const FirmCollection = () => {
       </div>
       <hr className='mb-[30px] border-fuchsia-700 h-5 w-[80%] mx-auto border-t-4 rounded-full' />
       <div class="container px-1 mx-auto w-full my-4">
-        <div class="flex flex-wrap -mt-5 w-full justify-center items-center">
+        <div class="flex flex-wrap -mt-5 w-full items-center">
           {firmData.map((apple) => {
             return apple.firm.map((item) => {
               if (selectRegion === "All" || item.region.includes(selectRegion.toLocaleLowerCase())) {

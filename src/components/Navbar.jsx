@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Drawer, Form, Input, Spin } from 'antd';
 import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
-import { API_URL } from '../../../client/src/vendorDashboard/data/apiPath';
+import { API_URL } from '../api/Url';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from "sweetalert2";
