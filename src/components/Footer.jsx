@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <section className="mt-10 bg-gradient-to-br from-fuchsia-300 via-orange-300 to-emerald-300 text-white">
+        <section className=" bg-gradient-to-br from-fuchsia-300 via-orange-300 to-emerald-300 text-white">
             <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
                 <div className="flex justify-center mt-8 space-x-6">
                     <a href="https://www.facebook.com/bhaskar.nani.7564/" target='blank' className=" hover:text-gray-500">

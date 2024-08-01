@@ -76,9 +76,10 @@ const AddProduct = () => {
             <div className='add-firm p-5'>
                 <h1 className='text-blue-600 text-3xl flex items-center'>Add Product <span className='text-[17px] text-teal-500 mx-3 mt-2'><CgAddR /></span></h1>
                 <hr className='w-[35px]' />
-                <div className="form border-2 border-orange-600 rounded-2xl h-[90%] mt-4 p-4 flex justify-center items-start bg-red-100">
-                    <form className='flex flex-col gap-3 mt-4 bg-red-300 w-full p-8' onSubmit={handleAddProduct}>
-                        <div className='flex gap-8 w-4/4 bg-emerald-400'>
+                
+                <div className="form border-2 border-orange-600 rounded-2xl h-[90%] mt-4 p-4 flex justify-center items-start">
+                    <form className='flex flex-col gap-3 mt-4 w-full p-8' onSubmit={handleAddProduct}>
+                        <div className='flex gap-8 w-4/4'>
                             <Input type="text" placeholder='Product Name' className='border-black w-[500px] h-[40px]' value={productName} onChange={(e) => setProductName(e.target.value)} />
                             <Input type="text" placeholder='Price' className='border-black w-[500px] h-[40px]' value={price} onChange={(e) => setPrice(e.target.value)} />
                         </div>
@@ -87,13 +88,13 @@ const AddProduct = () => {
                                 <h1 className="text-fuchsia-900 text-lg py-2">Category :</h1>
                                 <span className="flex gap-7 mt-2 items-center">
                                     <CustomCheckboxWrapper className='flex gap-12'>
-                                        <span className='flex items-center gap-4'>Veg <Checkbox className='' checked={category.includes('veg')} value="veg" onChange={handleCategoryChange} /></span>
+                                        <span className='flex items-center gap-4 '>Veg <Checkbox className='' checked={category.includes('veg')} value="veg" onChange={handleCategoryChange} /></span>
                                         <span className='flex items-center gap-4'>Non-Veg <Checkbox checked={category.includes('non-veg')} value="non-veg" onChange={handleCategoryChange} /></span>
                                     </CustomCheckboxWrapper>
                                 </span>
                             </span>
                             <span className='w-3/4'>
-                                <h1 className="text-fuchsia-900 text-lg py-2">Best Seller </h1>
+                                <h1 className="text-fuchsia-900 text-lg py-2">Best Seller :</h1>
                                 <span className="flex gap-7">
                                     <CustomRadioWrapper className='flex gap-12'>
                                     <span className='flex items-center gap-4'>Yes <Radio className='radio' value="true" checked={bestSeller === true} onChange={handleBestSeller} /></span>
@@ -102,9 +103,9 @@ const AddProduct = () => {
                                 </span>
                             </span>
                         </div>
-                        <CustomTextArea placeholder='Description' className='border-black outline-none mt-6 w-[500px] h-[700px]' value={description} onChange={(e) => setDescription(e.target.value)} />
-                        <Input type="file" className='border-black h-[100px] w-[200px] flex justify-center items-center' onChange={handleImageUpload} />
-                        <Button htmlType='submit' className='rounded-none bg-orange-500 text-white w-[300px] mt-4'>Add</Button>
+                        <CustomTextArea placeholder='Description' className='border-black outline-none mt-6 w-[500px]' value={description} onChange={(e) => setDescription(e.target.value)} />
+                        <Input type="file" className='border-black h-[40px] w-[200px] flex justify-center items-center mt-4' onChange={handleImageUpload} />
+                        <Button htmlType='submit' className='rounded-none bg-orange-500 text-white w-[300px] mt-4 '>Add</Button>
                     </form>
                 </div>
             </div>
@@ -127,7 +128,8 @@ const Wrapper = styled.div`
 const CustomCheckboxWrapper = styled.div`
   .ant-checkbox {
     width: 30px; 
-    height: 30px; 
+    height: 30px;
+    border:1px solid black; 
   }
 
   .ant-checkbox-inner {
@@ -145,12 +147,14 @@ const CustomCheckboxWrapper = styled.div`
     width: 8px; 
     height: 14px; 
     border-width: 2px; 
+    
   }
 `;
 const CustomRadioWrapper = styled.div`
    .ant-radio {
     width: 30px;
     height: 30px; 
+    border:1px solid black;
   }
 
   .ant-radio-inner {
@@ -172,7 +176,7 @@ const CustomRadioWrapper = styled.div`
 const { TextArea } = Input;
 const CustomTextArea = styled(TextArea)`
   width: 80%; 
-  height: 300px;
+  height: 500px;
 
   `;
 export default AddProduct

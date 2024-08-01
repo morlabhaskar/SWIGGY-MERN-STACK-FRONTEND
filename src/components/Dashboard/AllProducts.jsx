@@ -24,6 +24,7 @@ const StyledTable = styled(Table)`
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
+  const [productss,setProductss] = useState([])
 
   // Fetch products from the API
   const productHandler = async () => {
@@ -41,6 +42,7 @@ const AllProducts = () => {
   useEffect(() => {
     productHandler();
   }, []);
+  const productCount = products && products ? products.length : 0;
 
   // Delete product by ID
   const deleteProductById = async (productId) => {
@@ -111,6 +113,9 @@ const AllProducts = () => {
           </span>
         </h1>
         <hr className='w-[50px] border-t-4 rounded-[10px] border-orange-400'/>
+      </div>
+      <div className='mt-4'>
+        <p className='text-sm'>SHOWS <span className='text-fuchsia-600'>05</span> OUT OFF <span className='text-fuchsia-600'>0{productCount} </span><span>PRODUCTS</span></p>
       </div>
       <div className='flex justify-center items-center'>
         {products.length === 0 ? (

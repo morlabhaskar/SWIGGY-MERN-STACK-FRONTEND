@@ -17,6 +17,7 @@
     "@mui/material": "^5.16.5",
     "antd": "^5.19.3",
     "react": "^18.3.1",
+    "react-awesome-reveal": "^4.2.13",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
     "react-loader-spinner": "^6.1.6",
