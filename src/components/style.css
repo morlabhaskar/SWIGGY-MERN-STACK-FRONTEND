@@ -2,7 +2,6 @@
 
 @media (max-width: 426px) {
     .filter-btns {
-        /* background-color: red; */
         display: flex;
         flex-direction: column;
     }

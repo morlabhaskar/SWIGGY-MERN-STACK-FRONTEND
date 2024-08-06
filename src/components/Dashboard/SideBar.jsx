@@ -44,11 +44,7 @@ const Wrapper = styled.div`
     .add span {
       padding-left: 35px;
       cursor: pointer;
-    
-      
     }
-      
-
 `;
 
 export default SideBar

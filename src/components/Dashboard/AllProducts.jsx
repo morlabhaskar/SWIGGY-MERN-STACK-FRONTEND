@@ -127,7 +127,7 @@ const AllProducts = () => {
             dataSource={products}
             pagination={{ pageSize: 5 }}
             scroll={{ y: 440 }}
-            rowKey="_id" // Ensure each row has a unique key
+            rowKey="_id" 
             className=' mt-6 border border-emerald-500 border-2 rounded-xl'
           />
           </div>
